@@ -24,8 +24,8 @@ def sign_in_with_cloudscraper():
     for idx, cookie in enumerate(cookie_list):
         print(f"使用第 {idx + 1} 个账号进行签到...")
 
-        random_delay = random.randint(20 * 60, 59 * 60)
-        print(f"账号 {idx + 1} 之前将等待 {random_delay // 60} 分钟 {random_delay % 60} 秒...")
+        random_delay = random.randint(60, 300)  # 随机等待 60 到 300 秒
+        print(f"账号 {idx + 1} 之前将等待 {random_delay} 秒...")
         time.sleep(random_delay)
 
         headers = {
